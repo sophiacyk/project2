@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Gender Equality</title>
+
+  <!-- Leaflet CSS & JS -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.6.0/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js"></script> -->
+
+  <link href="assets/d3-geomap-1.0.2/css/d3.geomap.css" rel="stylesheet">
+  <script src="assets/d3-geomap-1.0.2/vendor/d3.geomap.dependencies.min.js"></script>
+  <script src="assets/d3-geomap-1.0.2/js/d3.geomap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.6.0/d3.min.js"></script> -->
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Load an icon library -->
+  
+
+  <!-- The sidebar -->
+  <div id="sidebar" class="sidebar">
+    <a class="btn" href="index.html"><i class="fas fa-vector-square"></i> METHODOLOGY</a>
+    <a class="btn" href="story.html"> <i class="fas fa-hand-holding-heart"></i> STORIES IN DEPTH</a>
+    <a class="btn active" href="map.html#map" onclick="showMap(event, 'map', 'ACCESSING INSTITUTIONS SCORE')"><i class="fas fa-globe-asia"></i> ACCESSING INSTITUTIONS</a>
+    <a class="btn" href="map.html#map" onclick="showMap(event, 'map', 'USING PROPERTY SCORE')"><i class="fas fa-globe-asia"></i> USING PROPERTY</a>
+    <a class="btn" href="map.html#map" onclick="showMap(event, 'map', 'GOING TO COURT SCORE')"><i class="fas fa-globe-asia"></i> GOING TO COURT</a>
+    <a class="btn" href="map.html#map" onclick="showMap(event, 'map', 'PROVIDING INCENTIVES TO WORK SCORE')"><i class="fas fa-globe-asia"></i> PROVIDING INCENTIVES TO WORK</a>
+    <a class="btn" href="map.html#map" onclick="showMap(event, 'map', 'BUILDING CREDIT SCORE')"><i class="fas fa-globe-asia"></i> BUILDING CREDIT</a>
+    <a class="btn" href="map.html#map" onclick="showMap(event, 'map', 'GETTING A JOB SCORE')"><i class="fas fa-globe-asia"></i> GETTING A JOB</a>
+    <a class="btn" href="map.html#map" onclick="showMap(event, 'map', 'PROTECTING WOMEN FROM VIOLENCE SCORE')"><i class="fas fa-globe-asia"></i> PROTECTING WOMEN FROM VIOLENCE</a>
+    <a class="btn" href="https://wbl.worldbank.org/" target="_blank"><i class="fas fa-globe"></i> DATA SOURCE</a>
+    
+  </div>
+
+
+  
+  <div id="main">
+    <div id="map" class="tablecontent"></div>
+  </div>
+  
+  
+
+  <!-- The div where we will inject our map -->
+  
+ 
+  <!-- API key -->
+  <!-- <script type="text/javascript" src="config.js"></script>  -->
+  <!-- Our JS -->
+  <script type="text/javascript" src="assets/js/logic.js"></script>
+  <script type="text/javascript" src="assets/js/ui.js"></script>
+ 
+
+</body>
+</html>

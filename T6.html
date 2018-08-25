@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Gender Equality</title>
+
+  <!-- Leaflet CSS & JS -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.6.0/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js"></script> -->
+
+  <link href="assets/d3-geomap-1.0.2/css/d3.geomap.css" rel="stylesheet">
+  <script src="assets/d3-geomap-1.0.2/vendor/d3.geomap.dependencies.min.js"></script>
+  <script src="assets/d3-geomap-1.0.2/js/d3.geomap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.6.0/d3.min.js"></script> -->
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" href="Styles.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  
+
+</head>
+
+<body>
+
+   
+
+  
+  <div id="sidebar" class="sidebar">
+      <a class="btn" href="index.html"><i class="fas fa-vector-square"></i> METHODOLOGY</a>
+      <a class="btn active" href="story.html"> <i class="fas fa-hand-holding-heart"></i> STORIES IN DEPTH</a>
+      <a class="btn" href="map.html#map" onclick="showMap(event, 'map', 'ACCESSING INSTITUTIONS SCORE')"><i class="fas fa-globe-asia"></i> ACCESSING INSTITUTIONS</a>
+      <a class="btn" href="map.html#map" onclick="showMap(event, 'map', 'USING PROPERTY SCORE')"><i class="fas fa-globe-asia"></i> USING PROPERTY</a>
+      <a class="btn" href="map.html#map" onclick="showMap(event, 'map', 'GOING TO COURT SCORE')"><i class="fas fa-globe-asia"></i> GOING TO COURT</a>
+      <a class="btn" href="map.html#map" onclick="showMap(event, 'map', 'PROVIDING INCENTIVES TO WORK SCORE')"><i class="fas fa-globe-asia"></i> PROVIDING INCENTIVES TO WORK</a>
+      <a class="btn" href="map.html#map" onclick="showMap(event, 'map', 'BUILDING CREDIT SCORE')"><i class="fas fa-globe-asia"></i> BUILDING CREDIT</a>
+      <a class="btn" href="map.html#map" onclick="showMap(event, 'map', 'GETTING A JOB SCORE')"><i class="fas fa-globe-asia"></i> GETTING A JOB</a>
+      <a class="btn" href="map.html#map" onclick="showMap(event, 'map', 'PROTECTING WOMEN FROM VIOLENCE SCORE')"><i class="fas fa-globe-asia"></i> PROTECTING WOMEN FROM VIOLENCE</a>
+      <a class="btn" href="https://wbl.worldbank.org/" target="_blank"><i class="fas fa-globe"></i> DATA SOURCE</a>
+      
+    </div>
+
+
+<div class=".nav_question">
+<nav class="all-nav">
+<ul>
+
+    <li class="dropdown">
+        <a href="" class="drop-button">Protecting Women from Voilence</a><i class="down"></i>
+        <div class="dropdown-content">
+          <a>1:Is there legislation specifically addressing domestic violence? If not, are there aggravated penalties for crimes committed against a spouse or family member?</a>
+          <a>2:Is there legislation on sexual harassment in employment?</a>
+          <a>3:Is there legislation on sexual harassment in education?</a>
+          <a>4:Are there criminal penalties for sexual harassment in employment?</a>
+          <a>5:Are there  civil remedies for sexual harassment in employment?</a>
+            
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="" class="drop-button">Getting a job</a><i class="down"></i>
+        <div class="dropdown-content">
+          <a>1:Is there paid leave available to women of at least 14 weeks?</a>
+          <a>2:Do women receive at least 2/3 of their wages for the first 14 weeks or the duration of the leave if it is shorter?</a>
+          <a>3:What is the percentage of maternity leave benefits paid by the government?</a>
+          <a>4:What is the difference between leave reserved for women and men relative to leave reserved for women, as a function of who pays?</a>
+          <a>5:Is there paid parental leave?</a>
+          <a>6:Does the law mandate equal remuneration for work of equal value?</a>
+          <a>7:Does the law mandate nondiscrimination based on gender in employment?</a>
+          <a>8:Is dismissal of pregnant workers prohibited?</a>
+          <a>9:Can parents work flexibly?</a>
+          <a>10:Can women work the same night hours as men?</a>
+          <a>11:Can women work in jobs deemed hazardous, arduous or morally inappropriate in the same way as men? </a>
+          <a>12:Are women able to work in the same industries as men?</a>
+          <a>13:Are women able to perform the same tasks at work as men? </a>
+          <a>14:Are the ages at which men and women can retire with full pension benefits equal? </a>
+          <a>15:Are the ages at which men and women can retire with partial pension benefits equal?</a>
+          <a>16:Is the mandatory retirement age for men and women equal?</a>
+        </div>
+      </li>
+
+      <li class="dropdown">
+          <a href="" class="drop-button">Building credit</a><i class="down"></i>
+          <div class="dropdown-content">
+            <a>1:Do retailers provide information to private credit bureaus or public credit registries?</a>
+            <a>2:Do utility companies provide information to private credit bureaus or public credit registries?</a>
+            <a>3:Does the law prohibit discrimination by creditors on the basis of sex or gender in access to credit?</a>
+            <a>4:Does the law prohibit discrimination by creditors on the basis of marital status in access to credit?</a>
+            
+          </div>
+      </li>
+
+      <li class="dropdown">
+          <a href="" class="drop-button">Providing incentives to work</a><i class="down"></i>
+          <div class="dropdown-content">
+            <a>1:Are mothers guaranteed an equivalent position after maternity leave?</a>
+            <a>2:Does the government support or provide childcare services?</a>
+            <a>3:Are payments for childcare tax deductible?</a>
+            <a>4:Are there specific tax deductions or tax credits that are only applicable to men?</a>
+            <a>5:Is primary education free and compulsory? </a>
+              
+          </div>
+        </li>
+      
+      <li class="dropdown">
+          <a href="" class="drop-button">Going to court</a><i class="down"></i>
+          <div class="dropdown-content">
+            <a>1:Does a woman’s testimony carry the same evidentiary weight in court as a man's?</a>
+            <a>2:Does the law establish an anti-discrimination commission? </a>
+            <a>3:Does the law mandate legal aid in civil and family matters? </a>
+            <a>4:Is there a small claims court or a fast-track procedure for small claims?</a>
+            
+          
+          </div>
+      </li>
+
+      <li class="dropdown">
+          <a href="" class="drop-button">Using property</a><i class="down"></i>
+          <div class="dropdown-content">
+          <a>1:Who legally administers marital property?</a>
+          <a>2:Does the law provide for valuation of nonmonetary contributions?</a>
+          <a>3:Do men and women have equal ownership rights to immovable property?</a>
+          <a>4:Do sons and daughters have equal rights to inherit assets from their parents?</a>
+          <a>5:Do female and male surviving spouses have equal rights to inherit assets?</a>
+          
+          </div>
+      </li>
+          
+
+
+    <li class="dropdown">
+        <a href="" class="drop-button">Accessing institutions</a><i class="down"></i>
+      <div class="dropdown-content">
+        <a>1:Are married women required by law to obey their husbands?</a>
+        <a>2:Can a woman legally apply for a passport in the same way as a man? </a>
+        <a>3:Can a woman legally apply for a national ID card in the same way as a man?</a>
+        <a>4:Can a woman legally travel outside the country in the same way as a man?</a>
+        <a>5:Can a woman legally travel outside her home in the same way as a man?</a>
+        <a>6:Can a woman legally choose where to live in the same way  as a man?</a>
+        <a>7:Can a woman legally sign a contract in the same way as a man?</a>
+        <a>8:Can a woman legally register a business in the same way as a man?</a>
+        <a>9:Can a woman legally open a bank account in the same way as a man?</a>
+        <a>10:Can a woman legally get job or pursue a trade or profession in the same way as a man?</a>
+        <a>11:Can a woman legally be "head of household" or "head of family" in the same way as a man?</a>
+        
+        
+      </div>
+      </li>
+      
+      
+      
+      
+      
+</ul>
+</nav>
+</div>
+
+
+  
+  <div id='T6_bar' class='graph'></div>
+ 
+  
+  
+
+  <!-- The div where we will inject our map -->
+  
+ 
+  <!-- API key -->
+  <!-- <script type="text/javascript" src="config.js"></script>  -->
+  <!-- Our JS -->
+  <script type="text/javascript" src="assets/js/logic.js"></script>
+  <script type="text/javascript" src="assets/js/T6.js"></script>
+ 
+
+</body>
+</html>
